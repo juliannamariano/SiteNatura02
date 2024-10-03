@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natura</title>
+    <link rel="stylesheet" href="lider.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/logo-natura.png" alt="Natura Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#consultoras">Consultoras</a></li> <!-- Alterado -->
+                <li><a href="#recompensas">Recompensas</a></li> <!-- Alterado -->
+                <li><a href="#metas">Metas</a></li> <!-- Alterado -->
+                <li><a href="#dashboard">Dashboard</a></li> <!-- Alterado -->
+                <li><a href="#sair">Sair</a></li> <!-- Alterado -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="consultoras" class="user-info"> <!-- Alterado -->
+        
+        <div class="greeting">
+            <p>Olá André, você tem <strong>100 pontos</strong></p>
+        </div>
+
+    </section>
+
+    <section id="vendas" class="dashboard"> <!-- Alterado -->
+
+        <input type="text" id="search" placeholder="Pesquisar" onkeyup="searchTable()">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Última Atividade</th>
+                    <th>Meta Atual</th>
+                    <th>Pontos acumulados</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Roberta</td>
+                    <td>10/08/2024</td>
+                    <td>R$ 5.000</td>
+                    <td>320</td>
+                   
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Ana</td>
+                    <td>01/08/2024</td>
+                    <td>R$ 3.000</td>
+                    <td>150</td>
+                    
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Luiza</td>
+                    <td>09/08/2024</td>
+                    <td>R$ 4.500</td>
+                    <td>290</td>
+                 
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Martha</td>
+                    <td>06/09/2024</td>
+                    <td>R$ 3.500</td>
+                    <td>150</td>
+                  
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Julia</td>
+                    <td>25/09/2024</td>
+                    <td>R$ 5.500</td>
+                    <td>100</td>
+                   
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>Sophia</td>
+                    <td>04/10/2024</td>
+                    <td>R$ 6.000</td>
+                    <td>35</td>
+              
+                </tr>
+                <tr>
+                    <td>007</td>
+                    <td>Miriam</td>
+                    <td>17/10/2024</td>
+                    <td>R$ 2.500</td>
+                    <td>70</td>
+              
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="table.js"></script>
+
+    </section>
+
+    <!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modal-message" id="modal-message"></p>
+    </div>
+</div>
+
+    <section id="recompensas" class="offers">
+        <hr>
+        <h2>Ofertas</h2>
+        <div class="offers-grid">
+            <div class="offer-item">
+                <img src="./images/frescor.png" alt="Perfume com 50% de desconto">
+                <p>Perfume com 50% de Desconto</p>
+                <span>50 Pontos</span>
+                <button class="redeem-btn" data-points="50">Resgatar</button> <!-- Resgata por 50 pontos -->
+            </div>
+            <div class="offer-item">
+                <img src="./images/seve.png" alt="Compre 1 leve 2">
+                <p>Compre 1 leve 2</p>
+                <span>20 Pontos</span>
+                <button class="redeem-btn" data-points="20">Resgatar</button> <!-- Resgata por 20 pontos -->
+            </div>
+            <div class="offer-item">
+                <img src="./images/joias.png" alt="15% na Loja de Jóias">
+                <p>15% na Loja de Jóias em Prata e Semijóias - Mimppy</p>
+                <span>30 Pontos</span>
+                <button class="redeem-btn" data-points="30">Resgatar</button> <!-- Resgata por 30 pontos -->
+            </div>
+            <div class="offer-item">
+                <img src="./images/raimar.png" alt="15% de desconto na loja Raimar">
+                <p>15% de desconto na loja Raimar</p>
+                <span>30 Pontos</span>
+                <button class="redeem-btn" data-points="30">Resgatar</button> <!-- Resgata por 30 pontos -->
+            </div>
+            
+        </div>
+
+        <script src="botao.js"></script>
+    </section>
+
+
+    
+    <section id="dashboard" class="dashboard-section"> <!-- Alterado -->
+        <iframe title="dashboard_vendas_natura" width="1700" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiOTQ0NTQ4ZTgtZWI3MC00ZDcwLWJjMmEtODU2MWJhMjY4Zjg1IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" 
+        frameborder="0" allowFullScreen="true"></iframe>
+    </section>
+    
+
+    <section id="metas" class="goals-tabs"> <!-- Alterado -->
+        <button class="goal-tab active" onclick="showSection('acompanhamento')">Acompanhemento de equipe</button>
+        <button class="goal-tab" onclick="showSection('retencao')">Retenção de Consultoras</button>
+        <button class="goal-tab" onclick="showSection('recrutamento')">Recrutamento</button>
+    </section>
+
+    
+
+    <section class="goals-content">
+        <!-- Acompanhamento de Equipe -->
+        <div id="acompanhamento" class="goal-section active">
+            <h2>Objetivo: Garantir que 90% das consultoras atinjam suas metas mensais</h2>
+            <h3>Pontos a receber: 20</h3>
+            <div class="goal-grid">
+                <div class="goal-item">
+                    <h3>Progresso Atual</h3>
+                    <p>Consultoras que atingiram as metas</p>
+                    <img src="images/progresso.png" alt="Progresso Atual">
+                    <span>75%</span>
+                </div>
+                <div class="goal-item">
+                    <h3>Data Limite</h3>
+                    <p>30/08/2024</p>
+                    <img src="images/data.png" alt="Data Limite">
+                </div>
+                <div class="goal-item">
+                    <h3>Próximos passos</h3>
+                    <p>Apoiar consultoras com desempenho baixo</p>
+                    <img src="images/passos.png" alt="Próximos Passos">
+                </div>
+            </div>
+        </div>
+
+        <!-- Retenção de Consultoras -->
+        <div id="retencao" class="goal-section">
+            <h2>Objetivo: Manter 95% de retenção de consultoras na equipe</h2>
+            <h3>Pontos a receber: 40</h3>
+            <div class="goal-grid">
+                <div class="goal-item">
+                    <h3>Progresso Atual</h3>
+                    <p>92% de retenção alcançada</p>
+                    <img src="images/progresso.png" alt="Progresso Atual">
+                    <span>92%</span>
+                </div>
+                <div class="goal-item">
+                    <h3>Data Limite</h3>
+                    <p>20/09/2024</p>
+                    <img src="images/data.png" alt="Data Limite">
+                </div>
+                <div class="goal-item">
+                    <h3>Próximos passos</h3>
+                    <p>Engajar e reconhecer consultoras</p>
+                    <img src="images/passos.png" alt="Próximos Passos">
+                </div>
+            </div>
+        </div>
+
+        <!-- Recrutamento -->
+        <div id="recrutamento" class="goal-section">
+            <h2>Objetivo: Recrutar novas consultoras para a equipe</h2>
+            <h3>Pontos a receber: 25</h3>
+            <div class="goal-grid">
+                <div class="goal-item">
+                    <h3>Progresso Atual</h3>
+                    <p>4 novas consultoras recrutadas</p>
+                    <img src="images/progresso.png" alt="Progresso Atual">
+                    <span>80%</span>
+                </div>
+                <div class="goal-item">
+                    <h3>Data Limite</h3>
+                    <p>20/09/2024</p>
+                    <img src="images/data.png" alt="Data Limite">
+                </div>
+                <div class="goal-item">
+                    <h3>Próximos passos</h3>
+                    <p>Captar novas candidatas e apresentar benefícios da consultora</p>
+                    <img src="images/passos.png" alt="Próximos Passos">
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

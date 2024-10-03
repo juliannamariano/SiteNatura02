@@ -1,0 +1,351 @@
+:root {
+    --cor-fundo: linear-gradient(180deg, #ffffff 28%, #FE9022 100%);
+    --cor-preta: #000;
+    --cor-laranja: #FE9022;
+    --cor-branca: #fff;
+    --cor-cinza: #ccc;
+    --cor-texto-footer: #333;
+    --tamanho-fonte-base: 16px;
+}
+
+/* body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: var(--cor-fundo);
+    height: 100%;
+    font-size: var(--tamanho-fonte-base);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 1rem 1.25rem;
+}
+
+nav ul li a:hover {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+.logo img {
+    width: 6.25rem;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 1.25rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.3125rem 0.625rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0.625rem;
+}
+
+.user-info {
+    background-color: #fff;
+    padding: 1.25rem;
+    margin: 1.25rem;
+    border-radius: 0.3125rem;
+}
+
+.greeting p {
+    font-size: 2rem;
+    color: #333;
+}
+
+.dashboard {
+    padding: 1.25rem;
+}
+
+#search {
+    padding: 0.625rem;
+    width: 100%;
+    max-width: 18.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--cor-cinza);
+    border-radius: 2.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    height: 50vh;
+}
+
+table th, table td {
+    padding: 0.625rem;
+    text-align: left;
+    border-bottom: 1px solid var(--cor-cinza);
+}
+
+table th {
+    background-color: var(--cor-branca);
+    color: var(--cor-preta);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--cor-laranja);
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--cor-branca);
+}
+
+.status {
+    padding: 0.3125rem 0.625rem;
+    border-radius: 0.3125rem;
+}
+
+.status.active {
+    background-color: #d4edda;
+    color: var(--cor-preta);
+}
+
+.status.inactive {
+    background-color: #f8d7da;
+    color: var(--cor-preta);
+}
+
+.status.cancelled {
+    background-color: #f5c6cb;
+    color: var(--cor-preta);
+}
+
+.offers {
+    padding: 1.25rem;
+    
+}
+
+.offers h2 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    color: #333;
+    text-align: center;
+    margin-top: 0.625rem;
+    font-weight: bolder;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.625rem;
+    height: 70vh;
+}
+
+.offer-item {
+    padding: 0.3125rem;
+    text-align: center;
+    border-radius: 0.3125rem;
+    margin: 0;
+}
+
+.offer-item img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 0.625rem;
+    background-color: transparent;
+}
+
+.offer-item p {
+    font-size: 0.875rem;
+    margin-bottom: 0.3125rem;
+    color: #000000;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.offer-item span {
+    font-size: 0.75rem;
+    font-weight: bolder;
+    color: #000000;
+}
+
+/* Adicionando estilo para a seção do iframe */
+.dashboard-section {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3125rem;
+    margin: 1.25rem;
+}
+
+.dashboard-section iframe {
+    border: none;
+    border-radius: 0.3125rem;
+}
+
+@media (max-width: 768px) {
+    .dashboard-section {
+        padding: 0.625rem;
+    }
+    
+    .dashboard-section iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.goals-tabs {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0;
+}
+
+.goal-tab {
+    background-color: var(--cor-laranja);
+    border: none;
+    color: var(--cor-branca);
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    margin: 0 0.625rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.goal-tab.active {
+    background-color: var(--cor-preta);
+}
+
+.goal-section {
+    display: none;
+}
+
+.goal-section h2 {
+    margin-bottom: 10px;
+}
+
+.goal-section h3 {
+    margin-bottom: 10px;
+}
+
+.goal-section.active {
+    display: block;
+}
+
+.goals-content {
+    padding: 1.25rem;
+}
+
+.goal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    text-align: center;
+}
+
+.goal-item {
+    background-color: var(--cor-branca);
+    padding: 2rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.goal-item img {
+    width: 70%;
+    height: auto;
+    margin: 0.625rem 0;
+}
+
+.goal-item h3 {
+    font-size: 1.125rem;
+    color: var(--cor-preta);
+    margin-bottom: 0.625rem;
+}
+
+.goal-item span {
+    font-size: 1.125rem;
+    color: var(--cor-preta);
+    font-weight: bold;
+}
+
+.redeem-btn {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 30px;
+    margin-top: 10px; /* Espaçamento entre o botão e o conteúdo acima */
+}
+
+.redeem-btn:hover {
+    background-color: black;
+}
+
+.redeem-btn:active {
+    background-color: #c71585;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica na frente da tela */
+    z-index: 1; /* Fica na frente */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita o scroll se necessário */
+    background-color: rgb(0, 0, 0); /* Cor de fundo preta */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+    background-color: #ffa500;
+    margin: 15% auto; /* Centralizado */
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%; /* Largura do modal */
+    max-width: 500px; /* Largura máxima do modal */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.modal-message {
+    color: white;
+}
+
+/* Estilo do botão de fechar */
+.close {
+    color:white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+
+.close:hover,
+.close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
